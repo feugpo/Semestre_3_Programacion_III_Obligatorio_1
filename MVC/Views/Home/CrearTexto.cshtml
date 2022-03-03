@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "CrearTexto";
+}
+
+
+
+
+<h2>Exportar Tabla de Datos</h2>
+
+<form action="/home/CrearTexto" method="post">
+
+
+        <div class="form-group">
+            <label for="tablas">Tablas de la Base de Datos</label>
+            <select name="tablas">
+                <option value="" selected>Elegir..</option>
+                @foreach (string n in ViewBag.Nombres)
+                {
+                    <option value="@n">@n</option>
+                }
+            </select>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </form>

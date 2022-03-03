@@ -1,0 +1,88 @@
+﻿@model IEnumerable<Dominio.Proyecto>
+
+@{
+    ViewBag.Title = "misProyectos";
+}
+
+<h2>Proyectos Creados</h2>
+
+<div>
+   
+    <hr />
+    <table class="table-responsive table-hover text-center">
+        <tr style="text-align:center;">
+   
+            <th>
+                @Html.DisplayNameFor(model => model.Titulo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Monto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cuotas)
+            </th>
+            <th style="text-align:center;">
+                @Html.DisplayNameFor(model => model.Imagen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TasaInteres)
+            </th>
+    
+         
+            <th>
+                @Html.DisplayNameFor(model => model.Tipo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaCreacion)
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {<tr>
+ 
+    <td>
+        @Html.DisplayFor(modelItem => item.Titulo)
+    </td>
+
+
+    <td>
+        @Html.DisplayFor(modelItem => item.Descripcion)
+    </td>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.Monto)
+    </td>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.Cuotas)
+    </td>
+    <td>
+            <img src="/Imagenes/@item.Titulo@ViewBag.jpg" style="max-width:50%;width:auto;height:auto;" />
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.TasaInteres)
+    </td>
+
+  
+
+    <td>
+        @Html.DisplayFor(modelItem => item.Tipo)
+    </td>
+    <td>     
+        @Html.DisplayFor(modelItem => item.Estado)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.FechaCreacion)
+    </td>
+
+</tr>
+        }
+    </table>
+</div>
+        

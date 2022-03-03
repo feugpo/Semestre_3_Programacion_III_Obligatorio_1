@@ -1,0 +1,52 @@
+﻿@model MVC.Models.ViewModelProyecto
+
+@{
+    ViewBag.Title = "confirmarProyecto";
+}
+
+<h2>Asi Quedara tu proyecto</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <p>Proyecto</p>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div style="display:none" class="form-group">
+        <label for="solicitante">Nombre del Edificio</label>
+        <input type="text" id="nombre" class="form-control" name="solicitante" readonly value="1" />
+    </div>
+
+    <div style="border: 2px solid grey; border-radius: 25px; padding: 15px;">
+        <p>Titulo : @Model.Titulo</p>
+        <p>Descripcion : @Model.Descripcion</p>
+        <p> Monto Solicitado :@Model.Monto</p>
+        <p>Cuotas a pagar: @Model.Cuotas</p>
+        <p>Tasa De Interes : @Model.TasaInteres%</p>
+        <p>Tipo de su Proyecto: @Model.Tipo</p>
+        <p>Imagen : </p><p><img src="@ViewBag.imagen" style="max-width:50%;width:auto;height:auto; border-radius: 25px;" /></p>
+
+
+        <div>
+            <h3>Plan de financiacion</h3>
+            <p> Total a pagar : @ViewBag.montoconinteres</p>
+            <p>   @Html.DisplayFor(model => model.Cuotas) Cuotas de : @ViewBag.montoporcuota</p>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Confirmar" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+
+    <div>
+        @Html.ActionLink("Cancelar", "Home", "Home")
+    </div>
+
+
+</div>
+}

@@ -1,0 +1,30 @@
+﻿
+@{
+    /**/
+
+    ViewBag.Title = "Home";
+}
+
+<h2>Home</h2>
+
+@if (@ViewBag.Mensaje != null && ViewBag.Mensaje != "Se Confirmo el Proyecto con Exito" && ViewBag.Mensaje != " El proyecto fue evaluado, su estado es : Aprobado")
+{
+    <div class="alert alert-danger" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <h4>@ViewBag.Mensaje</h4>
+    </div>
+}
+@if (@ViewBag.Mensaje != null)
+{
+    if (ViewBag.Mensaje == "Se Confirmo el Proyecto con Exito" || ViewBag.Mensaje == " El proyecto fue evaluado, su estado es : Aprobado")
+    {
+        <div class="alert alert-success" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <h4>@ViewBag.Mensaje</h4>
+        </div>
+    }
+}

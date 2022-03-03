@@ -1,0 +1,142 @@
+﻿@model Dominio.Proyecto
+
+@{
+    ViewBag.Title = "VerProyecto";
+}
+
+
+
+<div>
+    <h2>Detalles del Proyecto</h2>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Solicitante)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Solicitante)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Titulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Monto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Monto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cuotas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cuotas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Imagen)
+        </dt>
+
+        <dd>
+
+            <img src="@ViewBag.imagen" style="max-width:20%;width:auto;height:auto;" />
+
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TasaInteres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TasaInteres)
+        </dd>
+        @if (Model.Integrantes != 1)
+        {
+            <dt>
+
+                @Html.DisplayNameFor(model => model.Integrantes)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Integrantes)
+            </dd>
+        }
+        @if (Model.Integrantes == 1)
+        {
+            <dt>
+                @Html.DisplayNameFor(model => model.Experiencia)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Experiencia)
+            </dd>
+        }
+        <dt>
+            @Html.DisplayNameFor(model => model.Tipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaCreacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaCreacion)
+        </dd>
+
+    </dl>
+</div>
+
+
+    <div>
+        <h3>Plan de financiacion</h3>
+        <p> Total a pagar : @ViewBag.montoconinteres</p>
+        <p>   @Html.DisplayFor(model => model.Cuotas) Cuotas de : @ViewBag.montoporcuota</p>
+    </div>
+
+
+    <form action="/home/CambiarEstado" method="post">
+        <div class="form-group" style="display:none">
+            <label for="id"></label>
+            <input type="number" class="form-control" name="id" value="@Model.Id" />
+        </div>
+
+        <div class="form-group">
+            <label for="votacion">Ingrese el Puntaje</label>
+            <input type="number" class="form-control" name="votacion" placeholder="entre 1 y 10" />
+        </div>
+
+        <div class="form-group">
+            @Html.ActionLink("Volver", "FiltrarProyectos", "Home")
+            <button type="submit" class="btn btn-primary">Aceptar</button>
+        </div>
+    
+    </form>
