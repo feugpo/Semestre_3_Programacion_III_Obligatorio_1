@@ -1,0 +1,79 @@
+REGISTRO - (Varían N°Cel, cedula y email)
+
+cedula repetida
+11111111 | hugo | gomez | 1987-09-12 | 099132780 | huguito0@hotmail.com | Hugo123
+
+menor 21
+15112345 | hugo | gomez | 2005-09-12 | 099132781 | huguito1@hotmail.com | Hugo123
+
+celulares no validos empieza != 0 / 2 pos != 9 / 3 pos == 0
+15212345 | hugo | gomez | 1987-09-12 | 199132782 | huguito2@hotmail.com | Hugo123
+15312345 | hugo | gomez | 1987-09-12 | 089132783 | huguito3@hotmail.com | Hugo123
+15412345 | hugo | gomez | 1987-09-12 | 090132784 | huguito4@hotmail.com | Hugo123
+
+mail ya existe
+15512345 | hugo | gomez | 1987-09-12 | 099132785 | fernando@mail.com | Hugo123
+
+contraseña sin numeros / sin mayusculas / sin minusculas / menor de 6 chars
+15612345 | hugo | gomez | 1987-09-12 | 099132786 | huguito@5hotmail.com | Hugohue
+15712345 | hugo | gomez | 1987-09-12 | 099132787 | huguito@6hotmail.com | hugo123
+15812345 | hugo | gomez | 1987-09-12 | 099132788 | huguito@7hotmail.com | HUGO123
+15912345 | hugo | gomez | 1987-09-12 | 099132789 | huguito@8hotmail.com | Hugo1
+
+LOGIN
+cedula no existe
+98989898 | Admin123
+contraseña equivocada
+11111111 | USu087
+
+NUEVO PROYECTO PERSONAL
+titulo repetido
+Barraca | este es un nuevo proyecto de prueba | 35000 | 25 | usar File | mi experiencia como trabajador
+ 
+monto < minimo
+Mi proyecto a | este es un nuevo proyecto de prueba | 200 | 25 | usar File | mi experiencia como trabajador 1
+
+monto = minimo
+Mi proyecto 1 | este es un nuevo proyecto de prueba | 5000 | 25 | usar File | mi experiencia como trabajador 2
+
+monto > maximo (con el 20 % menos)
+Mi proyecto b | este es un nuevo proyecto de prueba | 75000 | 25 | usar File | mi experiencia como trabajador 3
+
+monto = maximo (con el 20 % menos)
+Mi proyecto 2 | este es un nuevo proyecto de prueba | 72000 | 25 | usar File | mi experiencia como trabajador 4
+
+cuotas menos a minimo
+Mi proyecto 3 | este es un nuevo proyecto de prueba 3 | 72000 | 5 | usar File | mi experiencia como trabajador 5
+
+cuotas mayores a maximo
+Mi proyecto 123 | este es un nuevo proyecto de prueba 123 | 72000 | 50 | usar File | mi experiencia como trabajador 6
+
+
+NUEVO PROYECTO COOPERATIVO
+titulo repetido
+Barraca | este es un nuevo proyecto de prueba | 35000 | 25 | usar File  
+
+monto < minimo
+Mi proyecto 4 | este es un nuevo proyecto de prueba 4 | 200 | 25 | usar File 
+
+monto = minimo
+Mi proyecto 5 | este es un nuevo proyecto de prueba 5 | 5000 | 25 | usar File 
+
+monto > maximo (con el 20 % menos)
+Mi proyecto 6 | este es un nuevo proyecto de prueba 6 | 75000 | 25 | usar File  
+
+monto = maximo (con el 20 % menos)
+Mi proyecto 7 | este es un nuevo proyecto de prueba 7 | 72000 | 25 | usar File 
+
+cuotas menos a minimo
+Mi proyecto 8 | este es un nuevo proyecto de prueba 8 | 72000 | 5 | usar File 
+
+cuotas mayores a maximo
+Mi proyecto 9 | este es un nuevo proyecto de prueba 9 | 72000 | 50 | usar File 
+
+
+PUNTAJES DE PROYECTO (limites)
+1
+6
+10
+
